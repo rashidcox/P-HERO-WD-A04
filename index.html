@@ -15,8 +15,9 @@
 </head>
 
 <body style="font-family: 'Geist', sans-serif;" class="bg-gray-100 min-h-screen">
-    <div div class="max-w-6xl mx-auto p-8">
-       <!-- Title -->
+    <div class="max-w-6xl mx-auto p-8">
+
+        <!-- Title -->
         <h1 class="text-3xl font-bold text-blue-900 mb-8">
             Job Application Tracker
         </h1>
@@ -36,6 +37,59 @@
                 <p id="rejectedCount" class="text-2xl font-bold text-red-600">0</p>
             </div>
         </div>
+
+        <!-- Divider -->
+        <div class="border-t my-10"></div>
+
+        <!-- Available Jobs Header -->
+        <div class="flex justify-between items-center mb-4">
+            <h2 class="text-xl font-semibold text-blue-900">Available Jobs</h2>
+            <span id="jobCountText" class="text-gray-500 text-sm"></span>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="flex gap-2 mb-6">
+            <button onclick="setFilter('all')" class="filter-btn px-4 py-1 bg-blue-600 text-white rounded">
+                All
+            </button>
+            <button onclick="setFilter('interview')" class="filter-btn px-4 py-1 bg-gray-200 rounded">
+                Interview
+            </button>
+            <button onclick="setFilter('rejected')" class="filter-btn px-4 py-1 bg-gray-200 rounded">
+                Rejected
+            </button>
+        </div>
+
+
+        <!-- Job List -->
+        <div id="jobList" class="space-y-4"></div>
+
+        <!-- Empty State Card -->
+        <div id="noJobs" class="hidden mt-6 bg-white rounded-xl shadow-sm 
+                flex flex-col items-center justify-center 
+                text-center px-6 py-20 sm:py-28">
+
+            <!-- Icon -->
+            <div class="w-16 h-16 rounded-lg 
+                  flex items-center justify-center mb-6">
+
+                <div class="flex items-center justify-center w-full h-full">
+                    <img class="flex items-center" src="jobs.png" alt="">
+                </div>
+
+            </div>
+
+            <!-- Text -->
+            <h3 class="text-lg sm:text-xl font-semibold text-slate-800">
+                No jobs available
+            </h3>
+
+            <p class="text-sm text-slate-500 mt-2">
+                Check back soon for new job opportunities
+            </p>
+
+        </div>
+
     </div>
 </body>
 
